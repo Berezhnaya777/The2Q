@@ -1,0 +1,17 @@
+// Global (variables / mixins / etc)
+@import "base/variables";
+@import "base/mixins";
+@import "base/bases";
+
+// Page
+  //tempate
+@import "template/header";
+@import "template/footer";
+@import "template/button";
+@import "template/title";
+
+  //block
+@import "blocks/intro";
+@import "blocks/about";
+@import "blocks/advice";
+@import "blocks/quote";

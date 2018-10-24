@@ -1,0 +1,105 @@
+.quote{
+  padding: 121px 100px 44px;
+  @include mq(767px) {
+    padding: 121px 30px 44px;
+  }
+    .container{
+      .viewbox {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+          width: 100%;
+          overflow: hidden;
+
+          .viewbox_wrapper {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              width: 9999px;
+              -webkit-transition: -webkit-transform 0.3s ease-in-out;
+              transition: -webkit-transform 0.3s ease-in-out;
+              -o-transition: transform 0.3s ease-in-out;
+              transition: transform 0.3s ease-in-out;
+              transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+
+              .viewbox_item {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-box-pack: center;
+                      -ms-flex-pack: center;
+                          justify-content: center;
+                  -webkit-box-align: start;
+                      -ms-flex-align: start;
+                          align-items: flex-start;
+                  min-width: 100%;
+                  max-width: 100%;
+              }
+          }
+        .quote_item{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          text-align: center;
+          &-text{
+            padding-bottom: 65px;
+            font-size: 40px;
+            line-height: 49px;
+            font-family: $font_LatoItalic;
+            color: $color_grey;
+          }
+          &-author{
+            padding-bottom: 35px;
+            font-size: 20px;
+            color: $color_red;
+          }
+          &-photo{
+            width: 97px;
+            height: 47px;
+            background-color: $color_lightgrey;
+          }
+        }
+      }
+
+      .paginators{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: auto;
+        padding-top: 25px;
+        &_item{
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background-color: $color_grey;
+          margin-right: 20px;
+          cursor: pointer;
+
+          &.active{
+            background-color: $color_red;
+          }
+
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }

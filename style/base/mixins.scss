@@ -1,0 +1,49 @@
+@mixin clearfix {
+    &:after {
+        content:'';
+        display:table!important;
+        clear:both;
+        height:0!important;
+        visibility:hidden;
+    }
+}
+
+@mixin mq($from, $to: false) {
+    @if $to {
+        @media (min-width:$from) and (max-width:$to) {
+            @content;
+        }
+    } @else {
+        @media (max-width:$from) {
+            @content;
+        }
+    }
+}
+
+@mixin mqh($from, $to: false) {
+    @if $to {
+        @media (min-height:$from) and (max-height:$to) {
+            @content;
+        }
+    } @else {
+        @media (max-height:$from) {
+            @content;
+        }
+    }
+}
+
+@mixin mqx() {
+   @include mq(823px){
+       @include mqh(823px){
+           @content;
+       }
+   }
+}
+
+@mixin mqxs() {
+    @include mq(425px) {
+        @include mqh(500px) {
+            @content;
+        }
+    }
+}

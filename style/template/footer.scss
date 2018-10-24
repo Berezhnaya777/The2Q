@@ -1,0 +1,13 @@
+.footer{
+  padding: 40px 0 35px;
+  background-color: $color_grey;
+  .container{
+    .copyright{
+      padding-left: 10px;
+      font-size: 13px;
+      line-height: 20px;
+      font-family: $font_RubikLight;
+      color: $color_lightgrey;
+    }
+  }
+}

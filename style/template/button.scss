@@ -1,0 +1,33 @@
+.button{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 0.48px;
+  color: $color_white;
+  cursor: pointer;
+
+  &_partner{
+    width: 140px;
+    padding: 0 16px;
+    background-color: $color_red;
+
+    &:hover{
+      background-color: $color_grey;
+    }
+  }
+  &_login{
+    width: 97px;
+    padding: 0 30px;
+    background-color: $color_grey;
+    &:hover{
+      background-color: $color_red;
+    }
+  }
+}

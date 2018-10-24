@@ -1,0 +1,170 @@
+.header{
+  padding: 15px 30px;
+  background-color: $color_white;
+  @include mq(767px) {
+    padding: 15px 0 0;
+  }
+  &_container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+      .menu{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: 100%;
+
+        @include mq(767px) {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          .menu-upper{
+            width: 100%;
+            padding: 0 30px 10px;
+            &.active {
+              -webkit-box-shadow: 0px 4px 5.75px 0 rgba(0, 0, 0, 0.2);
+                      box-shadow: 0px 4px 5.75px 0 rgba(0, 0, 0, 0.2);
+              span{
+                top: 15px;
+                &:nth-child(1) {
+                    width: 0;
+                }
+
+                &:nth-child(2) {
+                    -webkit-transform: rotate(45deg);
+                        -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                }
+
+                &:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                        -ms-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                }
+
+                &:nth-child(4) {
+                    width: 0;
+                }
+              }
+
+            }
+
+            &_toggle{
+              display: block;
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              top: 12px;
+              right: 30px;
+              display: block;
+              background-color: transparent;
+              cursor: pointer;
+
+              span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 30px;
+                height: 5px;
+                background-color: $color_grey;
+                -webkit-transition: -webkit-transform .25s ease-in-out;
+                transition: -webkit-transform .25s ease-in-out;
+                -o-transition: transform .25s ease-in-out;
+                transition: transform .25s ease-in-out;
+                transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+
+                &:nth-child(1) {
+                    top: 5px;
+                }
+
+                &:nth-child(2) {
+                    top: 15px;
+                }
+
+                &:nth-child(3) {
+                    top: 15px;
+                }
+
+                &:nth-child(4) {
+                    top: 25px;
+                }
+              }
+            }
+          }
+          .menu_list{
+            display: none;
+            position: relative;
+            top: 0;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            width: 100%;
+            &-item{
+              padding-left: 30px;
+              border-bottom: 1px solid black;
+              &:last-child{
+                border-bottom: none;
+              }
+            }
+          }
+          .menu_buttons{
+            display: none;
+            width: 100%;
+            .button{
+              width: 100%;
+              -webkit-box-pack: start;
+                  -ms-flex-pack: start;
+                      justify-content: flex-start;
+              border-radius: 0;
+              font-size: 12px;
+              cursor: pointer;
+              &_partner{
+                padding: 12px 30px;
+              }
+              &_login{
+                padding: 12px 30px;
+              }
+            }
+          }
+        }
+        &-upper_toggle{
+          display: none;
+        }
+        &_list{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+
+          &-item{
+            padding-right: 20px;
+
+            &_link{
+              font-size: 13px;
+              line-height: 37px;
+              color:$color_grey;
+            }
+          }
+        }
+
+        &_buttons{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+
+          .button{
+            &:first-child{
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+  }
+}
